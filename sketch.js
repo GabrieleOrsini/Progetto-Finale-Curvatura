@@ -1,32 +1,35 @@
-/**
+function preload(){
+  treeModel = loadAsset("albero.glb")
 
-  Duplicate this sketch to start your project 🧪
-  More info: https://dev.codemotionkids.com/libraries/diorama/docs/
-  
-  Creative Commons BY-SA
 
-**/
-
-function preload() {
-  treeModel = loadAsset("albero.glb");
 }
-
 function setup() {
-  createCanvas3D(windowWidth, windowHeight);
-  
-  //Change background color of the scene
+  createCanvas3D(600, 400);
   background3D("#333333");
   
-  hideGrid();
+  var albero = beginGroup();
   
-  var tree = clone(treeModel,0,0,0);
+  endGroup()
+  
+  var lato= 100;
+  var lato2= 100;
+  var numeroAlberi = 50;
+  
+  for (var i=0; i<=numeroAlberi; i++){
+    
+    var x = random(-lato/2, lato/2);
+    var y = 0;
+    var z = random(-lato/2, lato/2);
+    
+    clone(treeModel, x, y, z);
+  }
+  
 
-  align(BOTTOM);
-  diffuse("grey");
-  box(0, 0, 0, 6, 0.5, 6);
+  
+  
+  
+  
 }
-
 function draw() {
-  // 🔍 Never create objects here, but don't forget to have it in your code:
-  // leave empty for the moment
+
 }
