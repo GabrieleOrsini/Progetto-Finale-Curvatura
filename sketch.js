@@ -1,6 +1,6 @@
 function preload(){
-  treeModel = loadAsset("albero.glb")
-  burnedTree = loadAsset("rock_and_burned_tree.glb")
+
+  burnedTree = loadAsset("burned_tree.glb")
   cherryTree = loadAsset("cherry_tree.glb")
 
 
@@ -15,7 +15,7 @@ function setup() {
   
   var lato= 100;
   var lato2= 100;
-  var numeroAlberi = 10;
+  var numeroAlberi = 20;
   
   for (var i=0; i<=numeroAlberi; i++){
     
